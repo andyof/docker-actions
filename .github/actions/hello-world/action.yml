@@ -2,6 +2,21 @@ name: "My Hello Action"
 
 description: "Say Hello with GitHub Actions"
 
+inputs:
+  firstGreeting:
+    description: "Who would you like to greet in the console"
+    required: true
+    default: "Hubot"
+
+  secondGreeting:
+    description: "Another person to greet"
+    required: true
+    default: "Mona the Octocat"
+
+  thirdGreeting:
+    description: "A third greeting"
+    required: false
+
 runs:
   using: "docker"
   image: "Dockerfile"
