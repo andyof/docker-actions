@@ -8,7 +8,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    types: [ labeled ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,3 +29,6 @@ jobs:
         uses: ./.github/actions/hello-world
         with:
           firstGreeting: "Andy"
+
+      - name: meow
+        uses: ./.github/actions/cat-facts
